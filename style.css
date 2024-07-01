@@ -8,8 +8,9 @@
 }
 
 body {
-    height: 100%;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    
     margin: 0;
     font-family: Helvetica, Sans-serif;
     overflow-x: hidden;
@@ -26,8 +27,8 @@ h1 {
   }
 
 .page {
-    width: 100vw;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     perspective: 1px;
     perspective-origin: center center;
     overflow-x: hidden;
