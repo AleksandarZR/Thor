@@ -140,8 +140,8 @@ html {
 
 .video {
     width: 100%;
-    height: auto;
-    /* position: relative; */
+    height: 70vh;
+    object-fit: cover;
 }
 
 @media (max-width: 1300px) {
