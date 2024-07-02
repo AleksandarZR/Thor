@@ -7,14 +7,9 @@
     padding: 0;
 }
 
-body {
-    width: 100vw;
-    height: 100vh;
-    
-    margin: 0;
-    font-family: Helvetica, Sans-serif;
-    overflow-x: hidden;
-}
+/* body {
+    Must be empty otherwise will override what is done in script.js and the effect will not work
+} */
 
 h1 {
     text-align: center;
@@ -24,26 +19,37 @@ h1 {
     overflow: hidden;
     overflow-y: hidden;
     text-shadow: rgb(255, 0, 0) 3px 3px 15px;
-  }
+}
 
 .page {
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
-    perspective: 1px;
-    perspective-origin: center center;
     overflow-x: hidden;
 }
 
 .thor {
-    width: 100%;
+    width: 75%;
     height: auto;
-    transform: translate3d(0, 0, .5px) scale(.3);
-    position: absolute; 
-    top: 20%;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    position: fixed;
+    top: 25%;
+    left: 10%;
+    /* transform: translate(-50%, -50%); */
+
+    animation-name: scaleAndTranslate;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-fill-mode: both;
 }
+
+@keyframes scaleAndTranslate {
+    to {
+        transform: scale(3) translateY(-1500px);
+    }
+  }
 
 .sky {
     width: 100%;
@@ -73,4 +79,33 @@ h1 {
 
 .text2 {
     padding: 0rem 5vw 5rem 5vw;
+}
+
+@media (max-width: 1300px) {
+    h1 {
+        padding-top: 3rem;
+    }
+
+    .text1 {
+        padding: 2rem 5vw 5rem 5vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .sky {
+        width: 100%;
+        height: 45vh;
+    }
+
+    .thor {
+        width: 120%;
+        left: -5%;
+    }
+}
+
+@media (max-width: 600px) {
+    .thor {
+        width: 200%;
+        left: -45%;
+    }
 }
