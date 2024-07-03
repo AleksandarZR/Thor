@@ -180,4 +180,10 @@ html {
         width: 200%;
         left: -45%;
     }
+
+    @keyframes scaleAndTranslate {
+        to {
+            transform: scale(3) translateY(-2000px);
+        }
+    }
 }
