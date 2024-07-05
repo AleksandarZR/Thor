@@ -63,6 +63,8 @@ html {
 
 .headline {
     /* padding-top: 5rem; */
+    padding-left: 1rem;
+    padding-right: 1rem;
     
     /* var(--background-color); */
     color: aliceblue;
@@ -86,14 +88,17 @@ html {
 @keyframes pulse {
     0% {
         text-shadow: rgb(255, 0, 0) 0px 0px 0px;
+        transform: scale(1);
     }
 
     50% {
         text-shadow: rgb(255, 0, 0) 3px 3px 50px;
+        transform: scale(1.2);
     }
 
     100% {
         text-shadow: rgb(255, 0, 0) 0px 0px 0px;
+        transform: scale(1);
     }
 }
 
@@ -125,10 +130,9 @@ html {
 }
 
 .hidden {
-    /* opacity: 0; */
+    opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
-    transition: all 3s;
 }
 
 .show {
@@ -136,6 +140,7 @@ html {
     filter: blur(0);
     transform: translateX(0);
     color: aliceblue;
+    transition: all 3s;
 }
 
 .video {
