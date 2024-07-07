@@ -101,8 +101,8 @@ html {
     }
 } */
 
-.animation-tomahawk {
-    animation-name: anim-tomahawk;
+.animationTomahawk {
+    animation-name: animTomahawk;
     animation-duration: 1s;
     animation-iteration-count: 1;
     animation-direction: linear;
@@ -110,7 +110,7 @@ html {
     animation-fill-mode: forwards;
 }
 
-@keyframes anim-tomahawk {
+@keyframes animTomahawk {
     0% {
         transform: translateX(1000px) translateY(-1000px) rotate(0);
     }
