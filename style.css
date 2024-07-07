@@ -75,17 +75,16 @@ html {
     overflow: hidden;
     overflow-y: hidden;
 
-    animation-name: pulse;
+    /* animation-name: pulse;
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    /* animation-iteration-count: 1; */
-    /* animation-play-state: paused; */
-    /* animation-delay: 1s; */
-    animation-fill-mode: both;
+    animation-fill-mode: both; */
+
+    text-shadow: rgb(255, 0, 0) 3px 3px 10px;
 }
 
-@keyframes pulse {
+/* @keyframes pulse {
     0% {
         text-shadow: rgb(255, 0, 0) 0px 0px 0px;
         transform: scale(1);
@@ -99,6 +98,45 @@ html {
     100% {
         text-shadow: rgb(255, 0, 0) 0px 0px 0px;
         transform: scale(1);
+    }
+} */
+
+.animation-tomahawk {
+    animation-name: anim-tomahawk;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-direction: linear;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes anim-tomahawk {
+    0% {
+        transform: translateX(1000px) translateY(-1000px) rotate(0);
+    }
+
+    100% {
+        transform: translateX(0px) translateY(0px) rotate(-1080deg);
+    }
+}
+
+.animation-rotate {
+    animation-name: anim-rotate;
+    animation-duration: 1s;
+    animation-iteration-count: 5;
+    animation-direction: linear;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    transform-origin: top right;
+}
+
+@keyframes anim-rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(-360deg);
     }
 }
 
