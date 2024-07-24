@@ -141,6 +141,7 @@ html {
 }
 
 .overflow {
+    padding-bottom: 20rem;
     width: 100%;
     max-width: 100%;
     background-color: var(--background-color);
